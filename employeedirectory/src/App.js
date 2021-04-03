@@ -6,6 +6,22 @@ import Table from "./Table";
 
 import "./App.css";
 
+// Custom component to render Genres 
+const Genres = ({ values }) => {
+  // Loop through the array and create a badge-like component instead of a comma-separated string
+  return (
+    <>
+      {values.map((genre, idx) => {
+        return (
+          <span key={idx} className="badge">
+            {genre}
+          </span>
+        );
+      })}
+    </>
+  );
+};
+
 function App() {
 
   /* 

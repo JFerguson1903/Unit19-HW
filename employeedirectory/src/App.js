@@ -1,29 +1,9 @@
 import React, { useMemo, useState, useEffect } from "react";
-
 import axios from "axios";
-
 import Table from "./Table";
-
 import "./App.css";
 
-// Custom component to render Genres 
-const Genres = ({ values }) => {
-  // Loop through the array and create a badge-like component instead of a comma-separated string
-  return (
-    <>
-      {values.map((genre, idx) => {
-        return (
-          <span key={idx} className="badge">
-            {genre}
-          </span>
-        );
-      })}
-    </>
-  );
-};
-
 function App() {
-
   /* 
     - Columns is a simple array right now, but it will contain some logic later on. It is recommended by react-table to memoize the columns data
     - Here in this example, we have grouped our columns into two headers. react-table is flexible enough to create grouped table headers
@@ -31,55 +11,40 @@ function App() {
   const columns = useMemo(
     () => [
       {
-        // first group - TV Show
-        Header: "TV Show",
-        // First group columns
+        // group - Employees
+        Header: "Employees",
+        // group columns
         columns: [
           {
-            Header: "Name",
-            accessor: "show.name"
+            Header: "Title",
+            accessor: "name.title",
           },
           {
-            Header: "Type",
-            accessor: "show.type"
+            Header: "First",
+            accessor: "name.first",
+          },
+          {
+            Header: "Last",
+            accessor: "name.last",
+          },
+          {
+            Header: "Email",
+            accessor: "email"
           }
         ]
       },
-      {
-        // Second group - Details
-        Header: "Details",
-        // Second group columns
-        columns: [
-          {
-            Header: "Language",
-            accessor: "show.language"
-          },
-          {
-            Header: "Genre(s)",
-            accessor: "show.genres"
-          },
-          {
-            Header: "Runtime",
-            accessor: "show.runtime"
-          },
-          {
-            Header: "Status",
-            accessor: "show.status"
-          }
-        ]
-      }
     ],
     []
   );
 
-  // data state to store the TV Maze API data. Its initial value is an empty array
+  // data state to store the API data. Its initial value is an empty array
   const [data, setData] = useState([]);
 
   // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-      const result = await axios("https://api.tvmaze.com/search/shows?q=snow");
-      setData(result.data);
+      const result = await axios("https://randomuser.me/api/?results=10");
+      setData(result.data.results);
     })();
   }, []);
 

@@ -8,11 +8,19 @@ export default function Table({ columns, data }) {
   // Update the state when input changes
   const handleFilterChange = e => {
     const value = e.target.value || undefined;
-    setFilter("show.name", value); // Update the show.name filter. Now our table will filter and show only the rows which have a matching value
+    setFilter("name.first", value); // Update the name.first filter. Now our table will filter and show only the rows which have a matching value
     setFilterInput(value);
   };
 
- 
+  // Create a state
+  const [filterInputLast, setFilterInputLast] = useState("");
+
+  // Update the state when input changes
+  const handleFilterChangeLast = e => {
+    const value = e.target.value || undefined;
+    setFilter("name.last", value); // Update the name.last filter. Now our table will filter and show only the rows which have a matching value
+    setFilterInputLast(value);
+  };
 
   // Use the useTable Hook to send the columns and data to build the table
   const {
@@ -40,7 +48,12 @@ export default function Table({ columns, data }) {
       <input
         value={filterInput}
         onChange={handleFilterChange}
-        placeholder={"Search name"}
+        placeholder={"Search First"}
+      />
+      <input
+        value={filterInputLast}
+        onChange={handleFilterChangeLast}
+        placeholder={"Search Last"}
       />
       <table {...getTableProps()}>
       <thead>

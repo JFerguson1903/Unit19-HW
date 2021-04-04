@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTable, useFilters, useSortBy } from "react-table";
 
 export default function Table({ columns, data }) {
-  // Create a state
+  // Create a state for First Name
   const [filterInput, setFilterInput] = useState("");
 
   // Update the state when input changes
@@ -12,7 +12,7 @@ export default function Table({ columns, data }) {
     setFilterInput(value);
   };
 
-  // Create a state
+  // Create a state for Last Name
   const [filterInputLast, setFilterInputLast] = useState("");
 
   // Update the state when input changes
@@ -36,24 +36,22 @@ export default function Table({ columns, data }) {
   },
   useFilters, // Adding the useFilters Hook to the table
   useSortBy // This plugin Hook will help to sort our table columns
-  // You can add as many Hooks as you want. Check the documentation for details. You can even add custom Hooks for react-table here
   );
 
   /* 
-    Render the UI for your table
-    - react-table doesn't have UI, it's headless. We just need to put the react-table props from the Hooks, and it will do its magic automatically
+    Render the UI for the table
   */
   return (
     <div>
       <input
         value={filterInput}
         onChange={handleFilterChange}
-        placeholder={"Search First"}
+        placeholder={"Filter First"}
       />
       <input
         value={filterInputLast}
         onChange={handleFilterChangeLast}
-        placeholder={"Search Last"}
+        placeholder={"Filter Last"}
       />
       <table {...getTableProps()}>
       <thead>

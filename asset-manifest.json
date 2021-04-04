@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/JFerguson1903/employeedirectory/static/css/main.b0913d4e.chunk.css",
-    "main.js": "/JFerguson1903/employeedirectory/static/js/main.9a8b804a.chunk.js",
-    "main.js.map": "/JFerguson1903/employeedirectory/static/js/main.9a8b804a.chunk.js.map",
-    "runtime-main.js": "/JFerguson1903/employeedirectory/static/js/runtime-main.2063f265.js",
-    "runtime-main.js.map": "/JFerguson1903/employeedirectory/static/js/runtime-main.2063f265.js.map",
-    "static/js/2.4be5765f.chunk.js": "/JFerguson1903/employeedirectory/static/js/2.4be5765f.chunk.js",
-    "static/js/2.4be5765f.chunk.js.map": "/JFerguson1903/employeedirectory/static/js/2.4be5765f.chunk.js.map",
-    "static/js/3.89a1fba3.chunk.js": "/JFerguson1903/employeedirectory/static/js/3.89a1fba3.chunk.js",
-    "static/js/3.89a1fba3.chunk.js.map": "/JFerguson1903/employeedirectory/static/js/3.89a1fba3.chunk.js.map",
-    "index.html": "/JFerguson1903/employeedirectory/index.html",
-    "static/css/main.b0913d4e.chunk.css.map": "/JFerguson1903/employeedirectory/static/css/main.b0913d4e.chunk.css.map",
-    "static/js/2.4be5765f.chunk.js.LICENSE.txt": "/JFerguson1903/employeedirectory/static/js/2.4be5765f.chunk.js.LICENSE.txt"
+    "main.css": "/Unit19-HW/static/css/main.b0913d4e.chunk.css",
+    "main.js": "/Unit19-HW/static/js/main.e78977ae.chunk.js",
+    "main.js.map": "/Unit19-HW/static/js/main.e78977ae.chunk.js.map",
+    "runtime-main.js": "/Unit19-HW/static/js/runtime-main.e5c53d35.js",
+    "runtime-main.js.map": "/Unit19-HW/static/js/runtime-main.e5c53d35.js.map",
+    "static/js/2.8a6c6ecd.chunk.js": "/Unit19-HW/static/js/2.8a6c6ecd.chunk.js",
+    "static/js/2.8a6c6ecd.chunk.js.map": "/Unit19-HW/static/js/2.8a6c6ecd.chunk.js.map",
+    "static/js/3.89a1fba3.chunk.js": "/Unit19-HW/static/js/3.89a1fba3.chunk.js",
+    "static/js/3.89a1fba3.chunk.js.map": "/Unit19-HW/static/js/3.89a1fba3.chunk.js.map",
+    "index.html": "/Unit19-HW/index.html",
+    "static/css/main.b0913d4e.chunk.css.map": "/Unit19-HW/static/css/main.b0913d4e.chunk.css.map",
+    "static/js/2.8a6c6ecd.chunk.js.LICENSE.txt": "/Unit19-HW/static/js/2.8a6c6ecd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2063f265.js",
-    "static/js/2.4be5765f.chunk.js",
+    "static/js/runtime-main.e5c53d35.js",
+    "static/js/2.8a6c6ecd.chunk.js",
     "static/css/main.b0913d4e.chunk.css",
-    "static/js/main.9a8b804a.chunk.js"
+    "static/js/main.e78977ae.chunk.js"
   ]
 }
